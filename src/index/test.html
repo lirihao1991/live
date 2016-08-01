@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<button id="btn-a">A</button>
+<button id="btn-b">B</button>
+<button id="btn-c">C</button>
+<script>
+    function bindEvent(btn, arr){
+        btn.addEventListener("click", function(){
+            console.log(arr);
+        })
+    }
+
+    function init(btn,arr){
+        bindEvent(btn, arr);
+    }
+    var data = {a:[], b:[], c:[]};
+    init(document.getElementById("btn-a"),data.a);
+    init(document.getElementById("btn-b"),data.b);
+    init(document.getElementById("btn-c"),data.c);
+    data.a.push(5);
+</script>
+</body>
+</html>

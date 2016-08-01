@@ -1,0 +1,45 @@
+body{
+    font-family: 'NotoSans-Regular NotoSans-Bold';
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+    padding:0px;
+}
+
+.gap{
+    height: 0.4rem;
+    background-color: #f2f2f2;
+}
+
+.containner-title{
+    padding: 0.4rem;
+    font-size: 0.37rem;
+}
+
+.body-text-containner{
+    padding: 0 0.62rem;
+    .body-text{
+        background-color: #f2f2f2;
+        padding: 0.4rem 0.32rem;
+        font-size: 0.37rem;
+        color: #282828;
+        line-height: 0.53rem;
+    }
+}
+
+.body-img-containner{
+    padding:0.8rem 1.06rem 0 1.06rem;
+    img{
+        width: 100%;
+    }
+}

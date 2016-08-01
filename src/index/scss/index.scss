@@ -1,0 +1,1006 @@
+body{
+    font-family: 'NotoSans-Regular NotoSans-Bold';
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+    padding:0px;
+}
+
+$baseImgUrl: 'http://a.xnimg.cn/wap/mobile/livevip';
+$bannerimgurl: url('http://a.xnimg.cn/wap/mobile/livevip/dist/imgs/firstbanner.png');
+$vipinfoicon: url('http://a.xnimg.cn/wap/mobile/livevip/dist/imgs/vipinfoicon.png');
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name}{
+    @content;
+  }  
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }  
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}                           
+
+.modal-containner-shadow{
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0, 0.5);
+    z-index: 100;
+    .modal-content-containner{
+        position: relative;
+        background:white;
+        width: 400px;
+        margin: auto;
+        border-radius: 5px;
+    }
+
+    .modal-header{
+        font-size: 0.4rem;
+        color: #505050;
+        padding:0.45rem 0;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .close-btn{
+        position: absolute;
+        height: 0.8rem;
+        width: 0.8rem;
+        background: white;
+        border-radius: 50%;
+        top: -0.3rem;
+        right: -0.3rem;
+        span{
+            color: #c2c2c2;
+            display: inline-block;
+            line-height: 0.75rem;
+            font-size: 0.75rem;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+    }
+}
+
+
+.userInfo-containner{
+    padding: 0.4rem;
+    position: relative;
+    .user-avt{
+        vertical-align: top;
+        height: 1.73rem;
+        width: 1.73rem; 
+        display: inline-block;
+        img{
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .user-info{
+        display: inline-block;
+        vertical-align: middle;
+        
+        .user-name{
+            vertical-align: text-bottom;
+            display: inline-block;
+            max-width: 2.2rem;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .vip-icon{
+            display: inline-block;
+            background-image: $vipinfoicon;
+            background-repeat: no-repeat;
+            height: 0.36rem;
+            margin-left: 0.2rem;
+            width: 1.2rem;
+            background-size: 23rem;
+            background-position: -17.4rem -0.24rem;
+            vertical-align: text-top;
+        }
+
+        p:nth-child(1){
+            vertical-align: top;
+            font-size: 0.4rem;
+            color: #282828;
+            margin-top: 0.3rem;
+        }
+        p{
+            padding-left: 0.26rem;
+            font-size: 0.34rem;
+            color: #a0a0a0;
+            margin-top: 0.32rem;
+        }
+    }
+
+    #click{
+        height: 0.8rem;
+        width: 2rem;
+        float: right;
+        background-color: #af67e6;
+        position: absolute;
+        right: 0.4rem;
+        top: 50%;
+        margin-top: -0.4rem;
+        text-align: center;
+        line-height: 0.9rem;
+        font-size: 0.37rem;
+        color: #fff;
+        border-radius: 3px;
+    }
+}
+
+.banner{
+    position: relative;
+    overflow: hidden;
+    height: 5.86rem;
+    background: url($baseImgUrl + '/dist/imgs/banner-background.png') no-repeat;
+    background-size: cover;
+    .banner-text{
+        height: 1.06rem;
+        position: absolute;
+        width: 100%;
+        bottom: 1.2rem;
+        background: $bannerimgurl fixed no-repeat;
+        background-size: 12.7rem;
+        background-position: 2.1rem 4rem;
+    }
+    .z2-first{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+            .people-img{
+                opacity: 0;
+                height: 4.09rem;
+                width: 3.64rem;
+                background: $bannerimgurl no-repeat;
+                background-position: -6.9rem 0rem;
+                background-size: 11.1rem;
+                position: absolute;
+                left: 50%;
+                margin-left: -1.80rem;
+            }
+            p{
+            opacity: 0;
+            width: 100%;
+            color: white;
+            font-size: 0.32rem;
+            text-align: center;
+            position: absolute;
+            bottom: 0.64rem;
+            span{
+                font-size: 0.5rem;
+                vertical-align: middle;
+            }
+        }
+        .icon{
+            height: 1.2rem;
+            width: 1.06rem;
+        }
+
+        .icon-1{
+            position:absolute;
+            left: 0.96rem;
+            opacity: 0;
+            top: 2.36rem;
+            background: $bannerimgurl no-repeat;
+            background-position: -0.15rem -0.3rem;
+            background-size: 11.9rem;
+        }
+        .icon-2{
+            position: absolute;
+            left: 2.22rem;
+            background: $bannerimgurl no-repeat;
+            background-position: -1.9rem -0.3rem;
+            opacity: 0;
+            bottom: 3.1rem;
+            background-size: 11.9rem;
+        }
+        .icon-3{
+            position: absolute;
+            right: 2.46rem;
+            bottom: 2.81rem;
+            opacity: 0;
+            background: $bannerimgurl no-repeat;
+            background-position: -3.7rem -0.3rem;
+            background-size: 11.9rem;
+        }
+        .icon-4{
+            position: absolute;
+            right: 1.28rem;
+            opacity: 0;
+            bottom: 2.2rem;
+            background: $bannerimgurl no-repeat;
+            background-position: -5.4rem -0.3rem;
+            background-size: 11.9rem;
+        }
+    }
+
+    .z2-second{
+        position: absolute;
+        left: 200%;
+        height: 100%;
+        width: 100%;
+            .people-img{
+                opacity: 0;
+                height: 4.4rem;
+                width: 4.66rem;
+                position: absolute;
+                left: 50%;
+                margin-left: -3rem;
+                background: url($baseImgUrl + '/dist/imgs/bannerseconed.png') no-repeat;
+                background-size: 5rem;
+                background-position: 0.15rem;;
+                z-index: 999;
+            }
+            p{
+            opacity: 0;
+            width: 100%;
+            color: white;
+            font-size: 0.32rem;
+            text-align: center;
+            position: absolute;
+            bottom: 0.64rem;
+            span{
+                font-size: 0.5rem;
+                vertical-align: middle;
+            }
+        }
+
+        .icon{
+            overflow: hidden;
+        }
+
+        .hack{
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        .icon-inner{
+            height: 100%;
+            width: 100%;
+        }
+
+        .icon-1{
+            width: 1.46rem;
+            height: 1.46rem;
+            border-radius: 50%;
+            position:absolute;
+            left: 0.73rem;
+            bottom: 2.13rem;
+            opacity: 0;
+            .icon-inner{
+                background: $vipinfoicon no-repeat;
+                background-position: -5.34rem ;
+                background-size: 18.2rem;
+                position: absolute;
+                z-index: 999;
+            }
+            .icon-1-shadow{
+                background-color: #282828;
+                position:absolute;
+                opacity: 0.2;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .icon-2{
+            width: 1.17rem;
+            height: 1.17rem;
+            border-radius: 50%;
+            position: absolute;
+            left: 2.21rem;
+            bottom: 3.12rem;
+            opacity: 0;
+            .icon-inner{
+                background: $vipinfoicon no-repeat ;
+                background-position: 0.1rem 0.1rem;
+                background-size: 13.2rem;
+                position: absolute;
+                z-index: 999;
+            }
+            .icon-2-shadow{
+                background-color: #282828;
+                position:absolute;
+                opacity: 0.3;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .icon-3{
+            width: 0.9rem;
+            height: 0.9rem;
+            border-radius: 50%;
+            position: absolute;
+            right: 2.66rem;
+            bottom: 2.33rem;
+            opacity: 0;
+             .icon-inner{
+                background: $vipinfoicon no-repeat;
+                background-position: -0.9rem;
+                background-size: 10rem;
+                position: absolute;
+                z-index: 999;
+            }
+            .icon-3-shadow{
+                background-color: #282828;
+                position:absolute;
+                opacity: 0.5;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .icon-4{
+            width: 1.46rem;
+            height: 1.46rem;
+            border-radius: 50%;
+            position: absolute;
+            right: 1.38rem;
+            bottom: 2.89rem;
+            opacity: 0;
+            .icon-inner{
+                background: $vipinfoicon no-repeat;
+                background-position: -3.4rem;
+                background-size: 17.8rem;
+                position: absolute;
+                z-index: 999;
+            }
+            .icon-4-shadow{
+                background-color: #282828;
+                position:absolute;
+                opacity: 0.2;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .icon-5{
+            width: 1.17rem;
+            height: 1.17rem;
+            border-radius: 50%;
+            position: absolute;
+            right: 0.66rem;
+            bottom: 1.74rem;
+            opacity: 0;
+        }
+        .icon-inner{
+                background: $vipinfoicon no-repeat;
+                background-position: -5.8rem;
+                background-size: 14.8rem;
+                position: absolute;
+                z-index: 999;
+            }
+            .icon-5-shadow{
+                background-color: #282828;
+                position:absolute;
+                opacity: 0.4;
+                height: 100%;
+                width: 100%;
+            }
+
+    }
+
+    .z2-second.anm{
+            -webkit-transform: translateZ(0); 
+            -moz-transform: translateZ(0); 
+            -ms-transform: translateZ(0); 
+            -o-transform: translateZ(0); 
+            transform: translateZ(0);
+
+            p{
+                @include animation('text 0.4s ease forwards');
+            }
+
+            .people-img{
+                @include animation('appear-s 0.4s ease forwards');
+            }
+            .icon-1{
+                @include animation('icon-1-s 0.4s ease 0.1s forwards');
+            }
+            .icon-1 .icon-inner{
+                @include animation('icon-1-s 0.4s ease 0.1s forwards');
+            }
+            .icon-2{
+                @include animation('icon-2-s 0.4s ease 0.3s forwards');
+            }
+            .icon-3{
+                @include animation('icon-3-s 0.4s ease 0.4s forwards');
+            }
+            .icon-4{
+                @include animation('icon-4-s 0.4s ease 0.2s forwards');
+            }
+            .icon-5{
+                @include animation('icon-5-s 0.4s ease 0.5s forwards');
+            }
+    }
+    
+    .z2-first.anm{
+            -webkit-transform: translateZ(0); 
+            -moz-transform: translateZ(0); 
+           -ms-transform: translateZ(0); 
+           -o-transform: translateZ(0); 
+           transform: translateZ(0);
+
+            p{
+                @include animation('text 0.4s ease forwards');
+            }
+
+            .people-img{
+                @include animation('appear 0.4s ease forwards');
+            }
+            .icon-1{
+                @include animation('icon-1 0.4s ease 0.1s forwards');
+            }
+            .icon-2{
+                @include animation('icon-2 0.4s ease 0.2s forwards');
+            }
+            .icon-3{
+                @include animation('icon-3 0.4s ease 0.3s forwards');
+            }
+            .icon-4{
+                @include animation('icon-4 0.4s ease 0.4s forwards');
+            }
+    }
+
+    .carousel-containner{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    .switch-btn-containner{
+        height: 0.613rem;
+        width: 100%;
+        position:absolute;
+        bottom: 0;
+        vertical-align: middle;
+        text-align: center;
+        div{
+            height: 0.053rem;
+            width: 0.4rem;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2)
+        }
+        div:last-child{
+            margin-left: 0.1rem;
+        }
+        div.active{
+            background: white;
+        }
+    }
+}
+
+.gap{
+    background-color: #f2f2f2;
+}
+
+.vipInfo-title{
+    font-size: 0.34rem;
+    color: #282828;
+    padding: 0.4rem;
+}
+
+.vipInfo-list-containner{
+    padding: 0 0.39rem;
+    .img-containner{
+        display: block;
+        background-image: url($baseImgUrl +  '/dist/imgs/vipinfoicon.png');
+        background-repeat: no-repeat;
+        background-size: 23rem;
+        height: 2rem;
+        width: 2rem;
+        background-color: #f5f5f5;
+        display: inline-block;
+    }
+    li{
+        width: 21.72%;
+        margin-left: 4.34%;
+        float: left;
+        p{
+            padding: 0.21rem 0 0.26rem 0;
+            text-align: center;
+            font-size: 0.37rem;
+            color: #282828;
+            white-space: nowrap;
+        }
+    }
+    li:first-child{
+        margin-left: 0px;
+    }
+}
+
+.calemdar-containner{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+    padding-bottom: 0.1rem;
+    .calemdar-header{
+        background-color: #60beff;
+        text-align: center;
+        color: white;
+        padding: 0.34rem 0;
+    }
+    .calemdar-body{
+        padding: 0 0.45rem;
+    }
+    li{
+        font-size: 0.37rem;
+        float: left;
+        width: 8%;
+        margin-left: 7.3%;
+        text-align: center;
+        height: 0.66rem;
+        line-height: 0.7rem;
+    }
+    li.open{
+        background-color: #60beff !important;
+        color: #fff;
+        border-radius: 50%;
+    }
+    li.paste{
+        background-color: #e4e4e8;
+        border-radius: 50%;
+    }
+    ul li:first-child{
+        margin-left: 0;
+    }
+    ul{
+        overflow: hidden;
+    }
+    ul:not(:first-child){
+        margin-top: 0.26rem;
+    }
+}
+
+.gap.width-calemdar{
+    padding: 0.4rem;
+}
+
+// 弹窗部分页面
+.pay-containner.ios{
+    background-color: #f2f2f2;
+    .account-title{
+        padding-right:0.15rem;
+        display: inline-block;
+    }
+    .pay-account{
+        padding-top: 0.42rem;
+        padding-bottom: 0.6rem;
+        padding-left: 0.41rem;
+        font-size: 0.32rem;
+        color: #a0a0a0;
+        span{
+            vertical-align: middle;
+        }
+        .account-icon{
+            display: inline-block;
+            height: 0.4rem;
+            width: 0.4rem;
+            border-radius: 50%;
+            background-color: #c8c8c8;
+            vertical-align: middle;
+            background-image: url($baseImgUrl + '/dist/imgs/vipinfoicon.png?v=1');
+            background-repeat: no-repeat;
+            background-position: -22.26rem -0.6rem;
+            background-size: 23rem;
+        }
+        .account-value{
+            font-size: 0.37rem;
+            color: #505050;
+            padding-left: 0.15rem;
+        }
+        .account-id{
+            padding-left: 0.15rem;
+        }
+    }
+    
+    .pay-list-containner.ios{
+        height: initial !important;
+    }
+
+    .pay-list-containner{
+        padding: 0 0.32rem;
+        height: 2.8rem;
+        .pay-list{
+            background-color: #fff;
+            border: 3px solid #af67e6;
+            border-radius: 2px;
+            position: relative;
+            overflow: hidden;
+            padding: 0.4rem 0.33rem 0.3rem 0.33rem;
+            .time{
+                vertical-align: -webkit-baseline-middle;
+                font-size: 0.4rem;
+                color: #282828;
+                display: inline-block;
+            }
+            .money{
+                font-size: 0.58rem;
+                color: #af67e6;
+                font-weight: 600;
+                vertical-align: middle;
+            }
+            .yuan{
+                font-size: 0.4rem;
+                color: #af67e6;
+                vertical-align: sub;
+            }
+            .money-containner{
+                display: inline-block;
+                float: right;
+            }
+        }
+
+        .pay-list-android{
+            overflow: hidden;
+            width: 100%;
+            .month-list{
+                border: 2px solid #dddee3;
+                border-radius: 3px;
+                float:left;
+                width: 46.3%;
+                background-color: #fff;
+                p{
+                    text-align: center;
+                }
+                p:nth-child(1){
+                    font-size: 0.42rem;
+                    padding-top: 0.32rem;
+                    padding-bottom: 0.16rem;
+                }
+                p:nth-child(2){
+                    padding-bottom: 0.25rem;
+                    font-size: 0.24rem;
+                }
+                margin-left: 3%;
+            }
+            .month-list:first-child{
+                margin-left: 0 !important;
+            }
+            .month-list:nth-child(3){
+                margin-left: 0 !important;
+                margin-top: 0.15rem;
+            }
+            .month-list:nth-child(4){
+                margin-top: 0.15rem;
+            }
+            .month-list.active{
+                border: 2px solid #af67e6;
+            }
+        }
+    }
+
+    .pay-ins{
+        margin-top: 0.53rem;
+        .pay-ins-head{
+            overflow: hidden;
+            padding: 0 0.33rem;
+            white-space: nowrap;
+            .line{
+                vertical-align: middle;
+                display: inline-block;
+                border-bottom:1px solid #c2c2c2;
+                width: 2.4rem;
+            }
+            .diamond{
+                display: inline-block;
+                height: 0px;
+                width: 0px;
+                border: 0.08rem solid #c2c2c2;
+                margin: 0 0.1rem;
+                vertical-align: middle;
+                transform:rotate(45deg);
+                -moz-transform:rotate(45deg);    /* Firefox */
+                -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+            }
+        }
+    }
+
+    .pay-ins-content{
+        display: inline-block;
+        width: 88%;
+        padding:0 6%;
+        text-align: center;
+        ul{
+            color: #505050;
+            text-align: left;
+            font-size: 0.32rem;
+            display: inline-block;
+            vertical-align: top;
+        }
+        ul:nth-child(2){
+            margin-left: 3.5%;
+        }
+        li{
+            padding: 0.1rem 0;
+        }
+    }
+
+    .pay-button{
+        padding: 0 0.33rem 0.26rem 0.33rem;
+        font-size: 0.4rem;
+        a{
+            display: block;
+            padding: 0.4rem 0;
+            background-color: #ffd200;
+            border-radius: 3px;
+            text-align: center;
+        }
+        span{
+            font-weight: bold;
+        }
+    }
+
+    .payWay-title{
+        padding: 0.46rem 0.33rem 0.26rem 0.33rem;
+        font-size: 0.32rem;
+        color: #a0a0a0;
+    }
+
+    .payWay-content{
+        padding: 0 0.33rem 0.4rem 0.33rem;
+        overflow: hidden;
+        .wechat{
+            border: 2px solid #dddee3;
+            border-radius: 3px;
+            float:left;
+            padding: 0.26rem;
+            width: 37%;
+            background-color: #fff;
+        }
+        .wechat-icon{
+            height: 0.56rem;
+            width: 0.58rem;
+            display: inline-block;
+            vertical-align: middle;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+            margin-right: 0.16rem;
+        }
+        span{
+            vertical-align: middle;
+            color: #282828;
+            font-size: 0.37rem;
+        }
+
+        .alipay{
+            border: 2px solid #dddee3;
+            border-radius: 3px;
+            vertical-align: bottom;
+            height: 1.1rem;
+            width: 44.6%;
+            float: left;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            margin-left: 5.5%;
+        }
+        .alipay.active,.wechat.active{
+            border: 2px solid #af67e6;
+        }
+    }
+}
+
+.gift{
+    background-position: 0.19rem;
+}
+
+.invisible{
+    background-position: -2.18rem 0.3rem;
+}
+
+.vip{
+    background-position: -4.41rem;
+}
+
+.gifts{
+    background-position: -6.7rem;
+}
+
+.comment{
+    background-position: -9rem;
+}
+
+.atv{
+    background-position: -11.55rem;
+}
+
+.color-name{
+    background-position: -14.6rem;
+}
+
+
+@include keyframes('appear') {
+    0%{
+        top: 1.71rem;
+        opacity: 0;
+    }
+    100%{
+        top: 0.32rem;
+        opacity: 1;
+    }
+}
+
+@include keyframes('appear-s') {
+    0%{
+        top: 1.71rem;
+        opacity: 0;
+    }
+    100%{
+        top: 0.32rem;
+        opacity: 1;
+    }
+}
+
+
+
+@include keyframes('text') {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@include keyframes('icon-1') {
+    0%{
+        top: 4.6rem;
+        opacity: 0;
+    }
+    100%{
+        top: 2.36rem;
+        opacity: 1;
+    }
+}
+
+@include keyframes('icon-2') {
+    0%{
+        bottom: 0rem;
+        opacity: 0;
+    }
+    100%{
+        bottom: 3.1rem;
+        opacity: 1;
+    }
+}
+
+@include keyframes('icon-3') {
+    0%{
+        bottom: 0rem;
+        opacity: 0;
+    }
+    100%{
+        bottom: 2.81rem;
+        opacity: 1;
+    }
+}
+
+@include keyframes('icon-4') {
+    0%{
+        bottom: 0rem;
+        opacity: 0;
+    }
+    100%{
+        bottom: 2.2rem;
+        opacity: 1;
+    }
+}
+
+@include keyframes('icon-1-s') {
+    0%{
+        opacity: 0;
+        width: 1.46rem;
+        height: 1.46rem;
+    }
+    50%{
+        width: 1.69rem;
+        height: 1.69rem;
+    }
+    100%{
+        opacity: 1;
+        width: 1.46rem;
+        height: 1.46rem;
+    }
+}
+
+@include keyframes('icon-2-s') {
+    0%{
+        opacity: 0;
+        width: 1.17rem;
+        height: 1.17rem;
+    }
+    50%{
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+    100%{
+        opacity: 1;
+        width: 1.17rem;
+        height: 1.17rem;
+    }
+}
+
+@include keyframes('icon-3-s') {
+    0%{
+        opacity: 0;
+        width: 0.9rem;
+        height: 0.9rem;
+    }
+    50%{
+        width: 1.13rem;
+        height: 1.13rem;
+    }
+    100%{
+        opacity: 1;
+        width: 0.9rem;
+        height: 0.9rem;
+    }
+}
+
+@include keyframes('icon-4-s') {
+    0%{
+        opacity: 0;
+        width: 1.46rem;
+        height: 1.46rem;
+    }
+    50%{
+        width: 1.69rem;
+        height: 1.69rem;
+    }
+    100%{
+        opacity: 1;
+        width: 1.46rem;
+        height: 1.46rem;
+    }
+}
+
+@include keyframes('icon-5-s') {
+    0%{
+        opacity: 0;
+        width: 1.17;
+        height: 1.17rem;
+    }
+    50%{
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+    100%{
+        opacity: 1;
+        width: 1.17rem;
+        height: 1.17rem;
+    }
+}
