@@ -1,0 +1,227 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	height: 100%;
+	width: 100%;
+	background:#E9EDF0;
+	text-align: center;
+	 font-family: "黑体","microsoft yahei","宋体",Tahoma,Verdana,Arial,Helvetica,sans-serif;
+}
+.header{
+	background-color:#292929;
+	width: 100%;
+	height:50px;
+}
+.pageBody{
+	width: 1290px;
+	height: 750px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 110px;
+	background-color: #FFFFFF;
+}
+ul{
+	width: 210px;
+	float: left;
+}
+li{
+	list-style:none;
+}
+.setInfo{
+	height:120px ;
+	width: 100%;
+	
+}
+.setRealName{
+	width: 100%;
+	height:40px ;
+	background-color:#000000;
+	text-align: center;
+	padding-top: 10px;
+}
+.setMoney{
+	width: 100%;
+	height:50px ;
+	text-align: center;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-color:#E9EDF0 ;
+	border-style:solid;
+}
+.text1{
+	color:#38A2E7 ;
+	margin-top: ;
+	margin-bottom: auto;
+}
+.pageRight{
+
+	height: 750px;
+	width: 1070px;
+	border-left-width: 8px;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	border-color:#E9EDF0 ;
+	border-style:solid;
+	float: right;
+}
+.text3{
+	font-size: 14px;
+	margin-top: 30px;
+	margin-left: 40px;
+	color: #515151;
+	position: absolute;
+ 
+}
+.rTop{
+	height: 50px;
+	width: 100%;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-color:#E9EDF0 ;
+	border-style:solid;
+}
+.rBottom{
+	height: 700px;
+	width: 100%;
+}
+.recharge{
+	height: 50px;
+	width: 1000px;
+	margin-top: 62px;
+	margin-left: 40px;
+	position: absolute;
+}
+.way{
+	width: 120px;
+    
+	border-color:#D7D7D7 ;
+	position: absolute;
+	border-width: 1px;
+	border-style: solid;
+}
+.way img{
+	display: block;
+	width: 100%;
+}
+.way1{
+	position: absolute;
+	height: 50px;
+	width: 120px;
+}
+.way2{
+	position: absolute;
+	height: 50px;
+	width: 120px;
+	margin-left: 130px;
+}
+.way3{
+	position: absolute;
+	height: 50px;
+	width: 120px;
+	margin-left: 260px;
+}
+.way4{
+	position: absolute;
+	height: 50px;
+	width: 120px;
+	margin-left: 390px;
+}
+.way5{
+	position: absolute;
+	height: 50px;
+	width: 120px;
+	margin-left: 520px;
+}
+.text4{
+	font-size: 14px;
+	margin-top: 154px;
+	margin-left: 40px;
+	color: #515151;
+	position: absolute;
+}
+.payNumber{
+	height: 162px;
+	width: 1000px;
+	position: absolute;
+	margin-left: 40px;
+	margin-top: 186px;
+}
+.number{
+	height: 70px;
+	width: 210px;
+	border-color:#D7D7D7 ;
+	position: absolute;
+	border-width: 1px;
+	border-style: solid;
+}
+.number img{
+	display: block;
+	width: 100%;
+}
+.number1{
+	
+	height: 70px;
+	width: 210px;
+}
+.number2{
+	
+	margin-left: 230px;
+	margin-top: 0px;
+}
+.number3{
+	
+	margin-left: 460px;
+}
+.number4{
+	
+	margin-top: 90px;
+}
+.number5{
+	
+	margin-top: 90px;
+	margin-left: 230px;
+}
+.number6{
+	margin-left: 460px;
+	margin-top: 90px;
+}
+.text5{
+	font-size: 14px;
+	margin-top: 386px;
+	margin-left: 40px;
+	color: #515151;
+	position: absolute;
+}
+.userDefined{
+	height: 50px;
+	width: 320px;
+	margin-top: 420px;
+	margin-left: 40px;
+	position: absolute;
+	font-size: 14px;
+	color:#505050; 
+	border-style: solid;
+	border-width: 1px;
+	border-color: #D7D7D7;
+	padding-top: 10px;
+}
+.write{
+	height: 40px;
+	width:180px;
+	text-align: center;
+	border-style: none;
+	background-color: #F5F5F5;
+	font-size: 14px;
+	color: #c8c8c8;
+
+}
+.way.active{
+	border: solid 1px red;
+}

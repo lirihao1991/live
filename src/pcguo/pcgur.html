@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <script href="http://s.xnimg.cn/js/jquery.js"></script>
-    <link rel="stylesheet" href="http://127.0.0.1:8080/dist/css/pcguoer.css">
+    <script src="http://127.0.0.1:9001/dist/js/jquery-3.0.0.js"></script>
+    <script src="http://127.0.0.1:9001/dist/js/chongZhi.js"></script>
+    <link rel="stylesheet" href="http://127.0.0.1:9001/dist/css/pcguoer.css">
+    <link rel="stylesheet" href="http://127.0.0.1:9001/dist/css/chongZhi.css">
+    <link rel="stylesheet" href="http://127.0.0.1:9001/dist/css/renZheng.css">
 </head>
 <body>
     <nav>
@@ -46,10 +49,93 @@
                 </div>
                 <ul>
                     <li class="active">主播实名认证</li>
-                    <li>人人果充值</li>
+                    <li id='li2'>人人果充值</li>
                 </ul>
             </div>
+            
+
+            <div class="right" id="r1">
+            <div class="rTop">
+                <p class="page1text2">实名认证</p>
+            </div>
+            <div class="rBottom">
+                <p class="page1text3">您的实名认证已通过，下载手机人人客户端即可开始直播</p>
+                <div class="line">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                </div>
+                <p class="page1text4">下载链接:</p>
+                <p class="page1text5">安卓 www.renren_android.com</p>
+                <p class="page1text6">IOS www.renren_ios.com</p>
+                <div class="dcode">
+                    <img src="2dcode.png">
+                </div>
+            </div>
+        </div>
+
+
+    
+            <div class="right" id="r2">
+            <div class="rTop">
+                <p class="text2"> 人人果充值</p>
+            </div>
+            <div class="rBottom">
+                <p class="text3">充值方式:</p>
+                <div class="recharge">
+                    <div class="way way1"><img src="way1.png"></div>
+                    <div class="way way2"><img src="way2.png"> </div>
+                    
+                </div>
+                <p class="text4">充值数量:</p>
+                <div class="payNumber">
+                    <div class="number number1"><img src="number1.png"></div>
+                    <div class="number number2"><img src="number2.png"></div>
+                    <div class="number number3"><img src="number3.png"></div>
+                    <div class="number number4"><img src="number4.png"></div>
+                    <div class="number number5"><img src="number5.png"></div>
+                    <div class="number number6"><img src="number6.png"></div>
+                </div>
+                <p class="text5">自定义充值数量：</p>
+                <div class="userDefined">
+                    自定义&nbsp<span ><input type="text" name="defined" class="write" value="最大值100000人人果" onfocus="if (value =='最大值100000人人果'){value =''}" onblur="if (value ==''){value='最大值100000人人果'}" ></span>&nbsp人人果
+                </div>
+                <div class="pay">
+                    <p class="jinE">应付金额<span>6</span>元<span>(可获得42人人果)</span></p>
+                    <div class="rechargeButton">立即充值</div>
+                </div>
+            </div>
+        </div>
+
         </div>
     </div>
+    <script>   
+    // $('.left ul li').click(function(){
+     //     $('.left ul li').removeClass('active');
+     //     $(this).addClass('active');
+     //     if($(this).index()==1){
+
+
+     //     }
+        
+         
+     // });
+    // document.getElementById("li2").onclick=function(e){
+    //     alert(e.target.innerHTML);
+    // }
+    
+    // function tiaozhuan2(e){
+    //     alert(e.innerHTML);
+
+
+     //    $('.left ul li').removeClass('active');
+     //     $(e).addClass('active');
+     // $('#r2').show();
+     //  $('#r1').hide();
+    
+    </script>
 </body>
 </html>
+
+<!-- $(window).on("hashchange",function(e){
+   console.log(window.location.hash);
+}) -->

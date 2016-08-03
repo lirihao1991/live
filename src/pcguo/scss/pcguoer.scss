@@ -1,5 +1,5 @@
 @import 'reset.scss';
-
+@import 'chongZhi.scss';
 html{
     height: 100%;
 }
@@ -29,7 +29,6 @@ nav {
     }
 
     .live{
-        width: 56px;
         margin-left: 82px;
         vertical-align: top;
         padding: 8px 0;
@@ -61,7 +60,6 @@ nav {
     }
 
     .main{
-        width: 56px;
         margin-left: 43px;
         vertical-align: top;
         padding: 8px 0;
@@ -102,7 +100,6 @@ nav {
     }
 
     .top10{
-        width: 70px;
         margin-left: 43px;
         vertical-align: top;
         padding: 8px 0;
